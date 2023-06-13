@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 export default function signup(){
     return(
-        <AuthLayout title="Sign-Up" desc="Please Register">
+        <AuthLayout title="Sign-Up" desc="Please Register" type="register">
         <Register/>
         <p className="text-sm mt-4 text-center">
         silahkan masuk bang{" "}

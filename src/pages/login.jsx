@@ -8,7 +8,7 @@ export default function signin(){
     <>
     <div className="bg-[url('../../../public/dog.jpg')] bg-cover"> 
     
-        <AuthLayout title="Sign-in" desc="Please Login">
+        <AuthLayout title="Sign-in" desc="Please Login" type="login">
         <Login/>
         <p className="text-sm mt-4 text-center">
         regis dulu bang kalau gapunya akun{" "}
