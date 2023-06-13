@@ -20,11 +20,12 @@ const Button3 =(props) =>{
     return <button className={`h-10 px-6 font-semibold rounded md ${color} text-black`}>{children}</button>
 }
 
-export default function ComponentProps() {
+export default function ComponentProps(props) {
+    const {children} = props
   return (
     <>
     <div className="flex justify-center items-center mb-8">
-    <h1 className="text-5xl font-bold">anjay</h1></div>
+    <h1 className="text-5xl font-bold">{children}</h1></div>
     <div className="flex justify-center items-center gap-x-4">
       <button className="h-10 px-6 font-semibold rounded-md bg-black text-white">button</button>
       <button className="h-10 px-6 font-smibold rounded-md bg-gray-300 text-black">button</button>
