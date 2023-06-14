@@ -7,21 +7,28 @@ import {createBrowserRouter, RouterProvider,
 import LoginPage from "./pages/login.jsx"
 import RegisterPage from "./pages/register.jsx"
 import ErrorPage from "./pages/error.jsx"
+import HomePage from "./pages/home"
+import ProductDetail from "./pages/produkDetail"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
-    errorElement:<ErrorPage/>
-  },
-  {
-    path: "/login",
     element: <LoginPage />,
+    errorElement:<ErrorPage/>
   },
   {
     path: "/register",
     element: <RegisterPage />,
   },
+  {
+    path: "/home",
+    element: <HomePage />,
+  },
+  {
+    path: "/produkdetail",
+    element: <ProductDetail />,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,25 +1,25 @@
 import React from "react";
 import AuthLayout from "../components/template/AuthLayout";
 import Login from "../components/organism/login";
-import {Link} from "react-router-dom"
+import Navbar from "../components/template/Navbar"
+import NavbarFooter from "../components/template/NavbarFooter"
+
 
 export default function signin(){
     return(
     <>
-    <div className="bg-[url('../../../public/dog.jpg')] bg-cover"> 
-    
+    <Navbar/>
+    <div className="flex w-full">
+        <div className="flex w-[90%]">
+        <img src="../drugs.jpg" alt="Gambar" className="h-62 w-full"/>
+        </div>
+        <div className="flex w-[30%] justify-center items-center">
         <AuthLayout title="Sign-in" desc="Please Login" type="login">
         <Login/>
-        <p className="text-sm mt-4 text-center">
-        regis dulu bang kalau gapunya akun{" "}
-        {/*<a className="font-bold text-blue-500" href="/register">Register</a>*/}
-        {/*cara menggunakan routing pake link buat pindah ke halaman selanjutny*/}
-        <Link className="font-bold text-blue-500" to="/register">
-        Register
-        </Link>
-        </p>
         </AuthLayout>
         </div>
+        </div>
+    <NavbarFooter/>
     </>
     )
 }
