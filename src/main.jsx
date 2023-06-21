@@ -6,13 +6,14 @@ import {createBrowserRouter, RouterProvider,
 } from "react-router-dom";
 import LoginPage from "./pages/login.jsx"
 import RegisterPage from "./pages/register.jsx"
-import ErrorPage from "./pages/error.jsx"
+import ProductPage from "./pages/products"
+import Counter from "./belajar/Lifecycle/Counter"
+import App from './App';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
-    errorElement:<ErrorPage/>
+    element: <App/>
   },
   {
     path: "/login",
@@ -22,6 +23,16 @@ const router = createBrowserRouter([
     path: "/register",
     element: <RegisterPage />,
   },
+  {
+    path: "/products",
+    element: <ProductPage />,
+  },
+  {
+    path: "/counter",
+    element: <Counter />,
+  },
+
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
