@@ -8,6 +8,7 @@ import LoginPage from "./pages/login.jsx"
 import RegisterPage from "./pages/register.jsx"
 import ErrorPage from "./pages/error.jsx"
 import ProductPage from './pages/products';
+import Profile from './pages/profile';
 
 
 
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
     path: "/products",
     element: <ProductPage/>
   },
+  {
+    path: "/profile",
+    element: <Profile/>
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

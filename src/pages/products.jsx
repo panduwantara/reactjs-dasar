@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CardProduct from '../components/organism/CardProduct'
 import Button from "../components/atom/Button";
 import { getProduct } from '../services/product.services';
-import { getUsername } from '../services/auth.services';
+import { useLogin } from '../hooks/useLogin';
 
 export default function ProductPage() {
   //State /UseState = data/penyimpanan yang di pake buat menghandle komponen yang berubah2
@@ -10,23 +10,9 @@ export default function ProductPage() {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [data, setData] = useState([]);
-  const [username, setUsername] = useState("");
-  //   {
-  //   id:1,
-  //   qty:1,
-  // },
-
-  useEffect(()=>{
-    const token =localStorage.getItem("token")
-    if (token){
-      setUsername(getUsername(token))
-    } else{
-      window.location.href = "/login"
-    }
-  }, [])
-
-
   
+  const username = useLogin()
+   
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart")) || []);
   },[]); //dependencies array (array kosong) = untuk menghentikan looping(warning)
@@ -82,7 +68,7 @@ export default function ProductPage() {
   return (
     <>
     <div className='bg-red-500 flex text-center items-center justify-center'>
-      <h4 className='text-xl'>Hi,{username}</h4>
+      <a href="/profile"><h4 className='text-xl'>Hi,{username}</h4></a>
       <button onClick={handleLogout} className='text-white'>LOGOUT</button>
     </div>
     <div className='flex flex-row justify-center items-center mt-10'>
