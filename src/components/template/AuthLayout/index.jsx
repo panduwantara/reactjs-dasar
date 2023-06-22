@@ -11,7 +11,7 @@ export default function AuthLayout(props) {
             <h1 className='text-3xl font-bold mb-2 text-blue-500'>{title}</h1>
             <p className='font-medium text-slate-500 mb-4'>{desc}</p>
             {children}
-            {/*cara pertama untuk memilih kondisional*/}
+            {/*cara pertama untuk memilih kondisional
             <p className='text-sm mt-5 text-center'>
               {type ==="login" ? "gapunya akun?" : "udah punya akun?"}</p>
               {type === "login" && (
@@ -24,7 +24,7 @@ export default function AuthLayout(props) {
                   Masuk gaes
                 </Link>
               )}
-              {/*Cara ke 2 */}
+              Cara ke 2 */}
               {type === "login" ? (
               <p className='text-sm mt-5 text=center'>
                 gapunya akun?{" "}
