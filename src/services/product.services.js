@@ -13,3 +13,15 @@ axios
         console.log(err)
     })
 }
+
+export const getDetailProduct =(id, callback) => {
+    axios
+        .get(`https://fakestoreapi.com/products/${id}`)//pake method get buat mengambil data dengan id di API
+        .then((res) => {//mengirimkan respons data jika sukses
+            console.log(res)
+            callback(res.data)
+        })
+        .catch((err) => {//menampilkan eror kalau tidak benar
+            console.log(err)
+        })
+    }
